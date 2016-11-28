@@ -26,6 +26,7 @@ public class StackHandler {
     public void karteUmdrehen(){
         AblageStapel.push(NaziStapel.top());
         NaziStapel.pop();
+
     }
 
 }
