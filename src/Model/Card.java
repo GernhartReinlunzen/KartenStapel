@@ -19,11 +19,7 @@ public class Card {
         this.yPos = yPos;
         this.width = width;
         this.height = height;
-        createCard();
-    }
-
-    public void createCard(){
-        rect = new Rectangle2D.Double(color,worth,xPos,yPos,width,height);
+        rect = new Rectangle2D.Double(xPos,yPos,width,height);
     }
 }
 
