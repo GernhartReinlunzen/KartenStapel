@@ -9,7 +9,7 @@ import java.util.Iterator;
 /**
  * Created by Jean-Pierre on 15.11.2016.
  */
-public class DrawingPanel extends JPanel implements ActionListener, KeyListener, MouseListener {
+public class DrawingPanel extends JPanel implements ActionListener, MouseListener {
 
     //Attribute
     private int dt;
@@ -89,29 +89,10 @@ public class DrawingPanel extends JPanel implements ActionListener, KeyListener,
     /**
      * Weitergabe an Zeichnungsobjekte.
      */
-    public void keyPressed(KeyEvent e) {
-        Iterator<DrawableObject> iterator = drawableObjects.iterator();
-        while (iterator.hasNext()) {
-            DrawableObject tempDO = iterator.next();
-            if (tempDO instanceof InteractableObject) {
-                ((InteractableObject) tempDO).keyPressed(e.getKeyCode());
-            }
-        }
-    }
 
     /**
      * Weitergabe an Zeichnungsobjekte.
      */
-    public void keyReleased(KeyEvent e) {
-        Iterator<DrawableObject> iterator = drawableObjects.iterator();
-        while (iterator.hasNext()) {
-            DrawableObject tempDO = iterator.next();
-            if (tempDO instanceof InteractableObject) {
-                ((InteractableObject) tempDO).keyReleased(e.getKeyCode());
-            }
-        }
-
-    }
 
     /**
      * Unbenutzt bis auf Weiteres

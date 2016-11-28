@@ -27,7 +27,6 @@ public class MainFrame extends JFrame {
         activePanel = new DrawingPanel();
         panels.add(activePanel);
         add(activePanel);
-        addKeyListener(activePanel);
         setLocation(x,y);
         setSize(width,height);
         setTitle(name);
@@ -59,11 +58,9 @@ public class MainFrame extends JFrame {
     public void setActiveDrawingPanel(int index){
         if (index < panels.size()){
             remove(activePanel);
-            removeKeyListener(activePanel);
             activePanel = panels.get(index);
             add(activePanel);
             revalidate();
-            addKeyListener(activePanel);
         }
     }
 }

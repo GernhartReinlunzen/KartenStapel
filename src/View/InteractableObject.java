@@ -12,10 +12,6 @@ import java.awt.event.MouseEvent;
  */
 public interface InteractableObject extends DrawableObject{
 
-    void keyPressed(int key);
-
-    void keyReleased(int key);
-
     void mouseReleased(MouseEvent e);
 
 
