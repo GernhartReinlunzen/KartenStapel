@@ -26,7 +26,13 @@ public class StackHandler {
     public void karteUmdrehen(){
         AblageStapel.push(NaziStapel.top());
         NaziStapel.pop();
+    }
 
+    public void StapelUmdrehen(){
+        if(NaziStapel.top()== null){
+            NaziStapel= AblageStapel;
+            AblageStapel = new CardStack<Card>();
+        }
     }
 
 }
