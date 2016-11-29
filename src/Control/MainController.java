@@ -1,22 +1,39 @@
 package Control;
 
-import View.MainFrame;
+import View.MainView;
+
+import Model.Card;
 
 /**
  * Created by gast06 on 28.11.2016.
  */
 public class MainController {
 
-        private MainFrame frame;
         private StackHandler stackHandler;
-        private AblageTop ablageTop;
-        private NachziehTop nachziehTop;
 
-        public MainController(MainFrame frame){
-            this.frame = frame;
+        public MainController(){
             stackHandler = new StackHandler();
-            nachziehTop = new NachziehTop();
-            ablageTop = new AblageTop(50,50,500,500);
         }
+
+    public boolean naziLehr(){
+        if(stackHandler.naziLehr()){
+            return true;
+        }
+        return false;
+    }
+
+    public Card flipCard(){
+        Card output;
+        output = stackHandler.karteUmdrehen();
+        return output;
+    }
+
+    public String shuffle(){
+        return stackHandler.shuffle();
+    }
+
+    public void stapelUmdrehen(){
+        stackHandler.stapelUmdrehen();
+    }
 
 }
