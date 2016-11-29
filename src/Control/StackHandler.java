@@ -25,7 +25,7 @@ public class StackHandler {
     }
 
     public boolean naziLehr() {
-        if (NaziStapel.isEmpty()) {
+        if(NaziStapel.isEmpty()) {
             return true;
         }
         return false;

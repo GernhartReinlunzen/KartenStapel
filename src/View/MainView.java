@@ -38,7 +38,7 @@ public class MainView {
     }
 
     public void flipCard() {
-        if(controller.naziLehr()){
+        if(!controller.naziLehr()){
             Card card = controller.flipCard();
             FlippedStack.setText(card.getFront());
         } else{

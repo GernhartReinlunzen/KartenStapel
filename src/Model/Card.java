@@ -23,7 +23,7 @@ public class Card{
     }
 
     public String getFront(){
-        String output= Integer.toString(getWorth())+ "   "+ Integer.toString(getColor());
+        String output= Integer.toString(getWorth()+1)+ "   "+ Integer.toString(getColor()+1);
         /**if(color == 0){
             if(worth == 0){
                 output = "\uF0AD";
